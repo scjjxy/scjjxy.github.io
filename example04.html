@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图片遮罩效果</title>
+		<style type="text/css">
+			.box {
+				width: 266px;
+				height: 250px;
+				border: 1px solid #ccc;
+				background: url(images/shuiguo.png) 0 0 no-repeat;
+				margin: 20px auto;
+				position: relative; /* 相对定位 */
+				overflow: hidden;   /* 隐藏溢出的内容 */
+			}			
+			.box hgroup {/* 定义遮罩层属性 */
+				position: absolute;/* 绝对定位 */
+				left: 0;
+				top: -250px; /* 在块元素的上方,不可见 */
+				width: 266px;
+				height: 250px;
+				background: rgba(0, 0, 0, 0.5); /* 半透明 */
+				transition: all 0.5s ease-in;/* 过渡效果 */
+
+			}
+			.box:hover hgroup {
+				position: absolute; /* 绝对定位 */
+				left: 0;
+				top: 0;				
+				
+			}
+			.box hgroup h2:nth-child(1) {/* 设置h2的第1个元素 */
+				font-size: 22px;
+				text-align: center;
+				color: #fff;
+				font-weight: normal;
+				margin-top: 58px;
+			}
+			.box hgroup h2:nth-child(2) {/* 设置h2的第2个元素 */
+				font-size: 14px;
+				text-align: center;
+				color: #fff;
+				font-weight: normal;
+				margin-top: 15px;
+			}
+			.box hgroup h2:nth-child(3) {/* 设置h2的第3个元素 */
+				width: 26px;
+				height: 26px;
+				margin-left: 120px;
+				margin-top: 15px;
+				background: url(images/jiantou.png) 0 0 no-repeat;
+			}
+
+			.box hgroup h2:nth-child(4) { /* 设置h2的第4个元素 */
+				width: 75px;
+				height: 22px;
+				margin-left: 95px;
+				margin-top: 25px;
+				background: url(images/anniu.png) 0 0 no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<hgroup>
+				<h2>一品水果 唇齿留香</h2>
+				<h2>泰国黑金刚莲雾</h2>
+				<h2></h2>
+				<h2></h2>
+			</hgroup>
+		</div>
+	</body>
+</html>
